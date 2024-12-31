@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey Alvizo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .parallax {
+        background-image: url('./images/austinSkyline.jpeg'); /* Replace with the path to your image */
+        background-size: cover; /* Adjusted to cover the entire area */
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center 50%; /* Adjusted to show more of the middle vertically */
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+
+        .gallery {
+            margin-top: 20px;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+
+        .thumbnail:hover {
+            border-color: #555;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .modal-image {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        h1 {
+            font-size: 4em;
+        }
+    </style>
+    <script>
+        function handleThumbnailClick(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+        }
+
+        function handleCloseModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header class="parallax" id="hero">
+        <h1>Joseph Mendoza</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#links">Links</a>
+    </nav>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>If the people who know me were to describe me in one word, it would likely be "social." I excel in collaborative environments, building strong relationships with colleagues and contributing to team success. I thrive on engaging discussions, whether diving into technical topics like the pros and cons of Java or analyzing trends in global events, showcasing my ability to think critically and adapt to diverse perspectives.</p>
+            <p>Another defining quality is my passion for learning and growth. I am currently pursuing a second bachelor’s degree in Mathematics to deepen my analytical skills and enhance my problem-solving abilities. Mathematics allows me to approach complex challenges methodically, making me adept at breaking down problems and finding efficient solutions—skills that directly translate to success in the workplace.</p>
+            <p>By combining a love for collaboration, a curious mind, and a strong analytical foundation, I bring a unique perspective and valuable contributions to any team or project.</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <h3>Sweet Iced Tea Labs - Owner / Software Engineer</h3>
+                    <h4>September 2023 - Present</h4>
+                    <p> Design and Develop trading software for Coinbase and Bittrex using their REST APIs. </p>
+                    <p>Implment multithreading for high performance computing.</p>
+                    <p>Utilize Spring, Log4J2, Websockets, Lombok, JWT, and JSON mapping in both Java and Kotlin.</p>
+                    <p>Developed a front end Java Swing application to analyze the results of the trading software.</p>
+                    <p>Collaborated with my partner via Github Enterprise in both in person and remote settings.</p>
+                </li>
+                <li>
+                    <h3>Microsoft - Software Engineer</h3>
+                    <h4>May 2020 - December 2024</h4>
+                    <p>Develop code in PowerShell and C# for improving SharePoint services.</p>
+                    <p>Develop PowerShell scripts to automate incidents raised by the service.</p>
+                    <p>As scrum master, set up and run the daily standup, retrospective, and sprint planning meetings.</p>
+                    <p>Use tools such as Azure DevOps and git to track and check in code.</p>
+                    <p>Utilize PowerShell to maintain OneDrive and SharePoint SLA.</p>
+                    <p>Monitor multiple metrics and dashboards for worldwide service health.</p>
+                </li>
+                <li>
+                    <h3>IBM - Staff Software Engineer</h3>
+                    <h4>July 2015 - November 2019</h4>
+                    <p>- Developed a leading cloud storage platform with PHP and Java.</p>
+                    <p>- Resolved an executive level security issue with iSCSI connections.</p>
+                    <p>- Reviewed code in Jira and Git.</p>
+                    <p>- Built unit tests in partnership with other developers.</p>
+                    <p>- Collaborated cross-functionally across a geographically dispersed team.</p>
+                    <p>- Led daily scrum meetings as the role Scrum Master.</p>
+                    <p>- Updated live server configuration files.</p>
+                    <p>- Provided senior-level customer support for SmartCloud Notes, Connection Cloud, Domino Core, Watson Workplace, and Box relay globally.</p>
+                    <p>- Utilized Salesforce to communicate with internal partners, direct customers, and service resellers.</p>
+                    <p>- Corrected data errors using SQL statements for cloud based user management.</p>
+                    <p>- Resolved code bugs in Java reported by level 2 engineers.</p>
+                    <p>- Developed tools to analyze issue frequency with VB.net and PHP.</p>
+                    <p>- Authored Lotus Scripts to resolve customer issues on Domino servers.</p>
+                </li>
+                <li>
+                    <h3>PIC - Software Engineer</h3>
+                    <h4>May 2014 - April 2015</h4>
+                    <p>- Leveraged PHP, JavaScript, and MySQL to re-engineer a C based application to a modern web app.</p>
+                    <p>- Utilized jQuery, Prototype JS, and CSS to enhance user experience.</p>
+                    <p>- Developed software using MVC architecture.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>University of Texas at San Antonio</h3>
+                    <h4>Bachelor of Science - Mathmatics</h4>
+                    <h5>2024 - Present</h5>
+                </li>
+                <li>
+                    <h3>University of Washington</h3>
+                    <h4>Certificate in C# Programming Using .NET Core</h4>
+                    <h5>2021</h5>
+                </li>
+                <li>
+                    <h3>University of Texas at San Antonio</h3>
+                    <h4>Bachelor of Science - Computer Science</h4>
+                    <h5>2010 - 2014</h5>
+                    <p>- Cybersecurity Concentration</p>
+                    <p>- Software Engineering Concentration</p>
+                    <p>- 3rd place in the Center for Innovation, Technology and Entrepreneurship competition</p>
+                </li>
+                <li>
+                    <h3>Northwest Vista College</h3>
+                    <h4>Associate of Science - Computer Science</h4>
+                    <h5>2017 - 2010</h5>
+                    <p>- President of the History Club</p>
+                    <p>- Vice President of the Robotics Club</p>
+                    <p>- Participated in robotics competitions</p>
+                    <p>- Raised money for club trips</p>
+                    <p>- Organized Women's History Month</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;">
+                    <li>Java</li>
+                    <li>C#</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>C++</li>
+                    <li>PowerShell</li>
+                    <li>C</li>
+                    <li>Swift</li>
+                    <li>JavaScript</li>
+                    <li>Visual Basics</li>
+                    <li>Matlab</li>
+                    <li>Node.js</li>
+                    <li>Perl</li>
+                    <li>MySQL</li>
+                    <li>Kusto</li>
+                    <li>DB2</li>
+                    <li>Keynote</li>
+                    <li>Final Cut Pro</li>
+                    <li>OBS</li>
+                    <li>Git</li>
+                    <li>NPM</li>
+                    <li>Azure DevOps</li>
+                    <li>jQuery</li>
+                    <li>Bash</li>
+                    <li>IntelliJ</li>
+                </div>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+        <section id="hobbies" class="section">
+            <h2>Hobbies</h2>
+            <p>I am passionate about exploring new experiences and cultivating a diverse range of interests. I enjoy dancing, which not only keeps me active but also connects me to different cultural traditions and forms of self-expression. My fascination with technology extends to flying drones and working on my homelab, where I gain hands-on experience with networking, Docker containers, and Linux systems. This hobby allows me to experiment with real-world scenarios, troubleshoot complex issues, and continuously expand my technical expertise.</p>
+
+            <p>Gaming is another hobby I value, as it combines strategy, creativity, and moments of relaxation. I also have a deep interest in music production, where I channel my creativity into crafting unique sounds and learning about audio technology. Traveling and learning about other cultures hold a special place in my life, offering opportunities to broaden my perspective, understand different ways of life, and gain inspiration from the world around me. Each of these hobbies not only enriches my personal life but also strengthens the creativity, curiosity, and problem-solving skills I bring to my professional work.</p>
+
+            <div class="gallery">
+                <h3>Photography</h3>
+                <div class="thumbnails">
+                    <img src="./images/1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="handleThumbnailClick('./images/1.jpg')">
+                    <img src="./images/2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="handleThumbnailClick('./images/2.jpg')">
+                    <img src="./images/3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="handleThumbnailClick('./images/3.jpg')">
+                    <img src="./images/4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="handleThumbnailClick('./images/4.jpg')">
+                    <img src="./images/5.jpg" alt="Thumbnail 5" class="thumbnail" onclick="handleThumbnailClick('./images/5.jpg')">
+                    <img src="./images/6.jpg" alt="Thumbnail 6" class="thumbnail" onclick="handleThumbnailClick('./images/6.jpg')">
+                    <img src="./images/7.jpg" alt="Thumbnail 7" class="thumbnail" onclick="handleThumbnailClick('./images/7.jpg')">
+                    <img src="./images/8.jpg" alt="Thumbnail 8" class="thumbnail" onclick="handleThumbnailClick('./images/8.jpg')">
+                    <img src="./images/9.jpg" alt="Thumbnail 9" class="thumbnail" onclick="handleThumbnailClick('./images/9.jpg')">
+                    <img src="./images/10.jpg" alt="Thumbnail 10" class="thumbnail" onclick="handleThumbnailClick('./images/10.jpg')">
+                    <img src="./images/11.jpg" alt="Thumbnail 11" class="thumbnail" onclick="handleThumbnailClick('./images/11.jpg')">
+                    <img src="./images/12.jpg" alt="Thumbnail 12" class="thumbnail" onclick="handleThumbnailClick('./images/12.jpg')">
+                    <img src="./images/13.jpg" alt="Thumbnail 13" class="thumbnail" onclick="handleThumbnailClick('./images/13.jpg')">
+                    <img src="./images/14.jpg" alt="Thumbnail 14" class="thumbnail" onclick="handleThumbnailClick('./images/14.jpg')">
+                    <img src="./images/15.jpg" alt="Thumbnail 15" class="thumbnail" onclick="handleThumbnailClick('./images/15.jpg')">
+                    <img src="./images/16.jpg" alt="Thumbnail 16" class="thumbnail" onclick="handleThumbnailClick('./images/16.jpg')">
+                    <img src="./images/17.jpg" alt="Thumbnail 17" class="thumbnail" onclick="handleThumbnailClick('./images/17.jpg')">
+                    <img src="./images/18.jpg" alt="Thumbnail 18" class="thumbnail" onclick="handleThumbnailClick('./images/18.jpg')">
+                    <img src="./images/19.jpg" alt="Thumbnail 19" class="thumbnail" onclick="handleThumbnailClick('./images/19.jpg')">
+                    <img src="./images/20.jpg" alt="Thumbnail 20" class="thumbnail" onclick="handleThumbnailClick('./images/20.jpg')">
+                    <img src="./images/21.jpg" alt="Thumbnail 21" class="thumbnail" onclick="handleThumbnailClick('./images/21.jpg')">
+                </div>
+
+                <div id="modal" class="modal" onclick="handleCloseModal()" style="display: none;">
+                    <img id="modal-image" class="modal-image" alt="Full view">
+                </div>
+            </div>
+        </section>
+        <section id="links" class="section">
+            <h2>Links</h2>
+            <ul style="display: flex; list-style: none; padding: 0;">
+                <li style="margin-right: 15px;"><a href="https://github.com/joeyalvizo" target="_blank">GitHub</a></li>
+                <li style="margin-right: 15px;"><a href="https://linkedin.com/in/joeyalvizo" target="_blank">LinkedIn</a></li>
+                <li style="margin-right: 15px;"><a href="https://bsky.app/profile/joeyalvizo.com" target="_blank">Bluesky</a></li>
+                <li style="margin-right: 15px;"><a href="https://open.spotify.com/artist/7t2FgjXBaZ1tqHxX2Wffnr" target="_blank">Spotify</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
