@@ -1,0 +1,8 @@
+name = "joeyalvizo-webpage"
+compatibility_date = "2026-08-14"
+pages_build_output_dir = "dist"
+
+# Cloudflare Email Service binding — requires Workers Paid plan
+# This creates env.SEND_EMAIL in your Pages Functions
+[[send_email]]
+name = "SEND_EMAIL"
